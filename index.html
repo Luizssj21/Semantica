@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página institucional da TechInova Soluções Tecnológicas - Inovação e desenvolvimento para o seu negócio.">
+    <title>TechInova Soluções - Inovação e Tecnologia</title>
+</head>
+<body>
+
+    <!-- CABEÇALHO PRINCIPAL -->
+    <header>
+        <div>
+            <h1>TechInova Soluções</h1>
+            <p>Transformando ideias em soluções digitais inovadoras</p>
+        </div>
+
+        <!-- BARRA DE NAVEGAÇÃO -->
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#diferenciais">Diferenciais</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Fale Conosco</a></li>
+                <li><a href="formulario.html">Exercício de Formulário</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <!-- SEÇÃO HERO / APRESENTAÇÃO -->
+        <section id="inicio">
+            <h2>Construindo o Futuro Digital</h2>
+            <p>Ajudamos empresas de todos os portes a acelerar sua transformação digital com softwares modernos, seguros e escaláveis.</p>
+            <a href="#contato">Solicitar Orçamento</a>
+        </section>
+
+        <!-- SEÇÃO SOBRE -->
+        <section id="sobre">
+            <h2>Sobre a TechInova</h2>
+            <p>Fundada em <time datetime="2018">2018</time>, a TechInova nasceu com a missão de democratizar o acesso à tecnologia de ponta para empresas em crescimento.</p>
+            
+            <figure>
+                <img src="https://via.placeholder.com/600x300" alt="Equipe da TechInova reunida planejando novos projetos digitais">
+                <figcaption>Nossa equipe multidisciplinar trabalhando em soluções ágeis para nossos clientes.</figcaption>
+            </figure>
+
+            <h3>Nossos Pilares</h3>
+            <ul>
+                <li><strong>Missão:</strong> Entregar valor através da tecnologia de forma transparente e sustentável.</li>
+                <li><strong>Visão:</strong> Ser referência nacional em engenharia de software e consultoria digital até 2030.</li>
+                <li><strong>Valores:</strong> Ética, inovação contínua, compromisso com a qualidade e foco nas pessoas.</li>
+            </ul>
+        </section>
+
+        <!-- SEÇÃO SERVIÇOS -->
+        <section id="servicos">
+            <h2>Nossos Serviços</h2>
+
+            <article>
+                <h3>Desenvolvimento de Software Sob Medida</h3>
+                <p>Criamos sistemas web e aplicativos móveis de alta performance focados nas necessidades exclusivas do seu negócio.</p>
+            </article>
+
+            <article>
+                <h3>Consultoria em Nuvem e DevOps</h3>
+                <p>Migração segura e arquitetura em nuvem para garantir escalabilidade, redução de custos e disponibilidade.</p>
+            </article>
+
+            <article>
+                <h3>Segurança da Informação</h3>
+                <p>Auditorias completas, testes de vulnerabilidade e implementação de boas práticas para proteção de dados (LGPD).</p>
+            </article>
+        </section>
+
+        <!-- SEÇÃO DIFERENCIAIS -->
+        <section id="diferenciais">
+            <h2>Por que Escolher a TechInova?</h2>
+            <ol>
+                <li>Atendimento personalizado e metodologia ágil (Scrum/Kanban).</li>
+                <li>Equipe certificada pelas principais provedoras globais de tecnologia.</li>
+                <li>Suporte técnico contínuo 24 horas por dia, 7 dias por semana.</li>
+            </ol>
+        </section>
+
+        <!-- SEÇÃO DEPOIMENTOS -->
+        <section id="depoimentos">
+            <h2>O que Nossos Clientes Dizem</h2>
+
+            <article>
+                <blockquote>
+                    <p>"A TechInova reformulou completamente nossa plataforma de atendimento. Tivemos um ganho de 45% na eficiência operacional no primeiro trimestre."</p>
+                </blockquote>
+                <cite>— Mariana Costa, Diretora de Operações na LogiExpress</cite>
+            </article>
+
+            <article>
+                <blockquote>
+                    <p>"Excelente suporte e rigor técnico. O projeto foi entregue dentro do prazo acordado e com qualidade superior à esperada."</p>
+                </blockquote>
+                <cite>— Roberto Silveira, CTO na FinTech Viva</cite>
+            </article>
+        </section>
+
+        <!-- SEÇÃO CONTATO COM FORMULÁRIO COMPLETO E VALIDAÇÕES BÁSICAS -->
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <p>Preencha o formulário abaixo para tirar dúvidas ou solicitar uma proposta comercial. Responderemos em até 24 horas úteis.</p>
+
+            <form action="#" method="POST">
+                
+                <!-- DADOS DE IDENTIFICAÇÃO -->
+                <fieldset>
+                    <legend>Dados de Identificação</legend>
+
+                    <p>
+                        <label for="nome">Nome Completo: *</label><br>
+                        <input 
+                            type="text" 
+                            id="nome" 
+                            name="nome" 
+                            required 
+                            minlength="3" 
+                            maxlength="80" 
+                            placeholder="Ex: Ana Silva"
+                            autocomplete="name">
+                    </p>
+
+                    <p>
+                        <label for="email">E-mail Corporativo: *</label><br>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            placeholder="Ex: ana.silva@empresa.com"
+                            autocomplete="email">
+                    </p>
+
+                    <p>
+                        <label for="telefone">Telefone / WhatsApp: *</label><br>
+                        <input 
+                            type="tel" 
+                            id="telefone" 
+                            name="telefone" 
+                            required 
+                            pattern="[0-9]{10,11}" 
+                            title="Digite apenas números (10 ou 11 dígitos, com DDD). Ex: 11987654321" 
+                            placeholder="Ex: 11987654321"
+                            autocomplete="tel">
+                    </p>
+                </fieldset>
+
+                <!-- DETALHES DA SOLICITAÇÃO -->
+                <fieldset>
+                    <legend>Detalhes da Solicitação</legend>
+
+                    <p>
+                        <label for="assunto">Assunto: *</label><br>
+                        <select id="assunto" name="assunto" required>
+                            <option value="" disabled selected>Selecione um assunto</option>
+                            <option value="orcamento">Solicitação de Orçamento</option>
+                            <option value="duvidas">Dúvidas sobre Serviços</option>
+                            <option value="suporte">Suporte Técnico</option>
+                            <option value="parcerias">Proposta de Parceria</option>
+                            <option value="outro">Outro Assunto</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="mensagem">Mensagem / Descrição do Projeto: *</label><br>
+                        <textarea 
+                            id="mensagem" 
+                            name="mensagem" 
+                            rows="5" 
+                            cols="40" 
+                            required 
+                            minlength="10" 
+                            maxlength="1000" 
+                            placeholder="Conte um pouco sobre sua necessidade ou projeto..."></textarea>
+                    </p>
+
+                    <p>
+                        <label>Como prefere ser contatado?</label><br>
+                        <input type="radio" id="contato-email" name="preferencia_contato" value="email" checked>
+                        <label for="contato-email">E-mail</label>
+
+                        <input type="radio" id="contato-whatsapp" name="preferencia_contato" value="whatsapp">
+                        <label for="contato-whatsapp">WhatsApp</label>
+
+                        <input type="radio" id="contato-telefone" name="preferencia_contato" value="telefone">
+                        <label for="contato-telefone">Ligação telefônica</label>
+                    </p>
+                </fieldset>
+
+                <!-- TERMOS E CONSENTIMENTO -->
+                <fieldset>
+                    <legend>Privacidade e Consentimento</legend>
+
+                    <p>
+                        <input type="checkbox" id="aceite_termos" name="aceite_termos" required>
+                        <label for="aceite_termos">Concordo com o tratamento dos meus dados para fins de contato comercial conforme a LGPD. *</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="newsletter" name="newsletter" value="sim">
+                        <label for="newsletter">Desejo receber novidades e artigos de tecnologia por e-mail.</label>
+                    </p>
+                </fieldset>
+
+                <!-- BOTÕES DE ENVIO -->
+                <p>
+                    <button type="submit">Enviar Mensagem</button>
+                    <button type="reset">Limpar Formulário</button>
+                </p>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- BARRA LATERAL COM INFORMAÇÕES COMPLEMENTARES -->
+    <aside aria-label="Informações adicionais da empresa">
+        <section>
+            <h3>Horário de Funcionamento</h3>
+            <p>Segunda a Sexta-feira: <time>08:00</time> às <time>18:00</time></p>
+            <p>Plantão de Emergência / Suporte 24/7 para clientes corporativos.</p>
+        </section>
+
+        <section>
+            <h3>Certificações e Reconhecimentos</h3>
+            <ul>
+                <li>ISO/IEC 27001 - Gestão de Segurança da Informação</li>
+                <li>Great Place to Work <time datetime="2025">2025</time></li>
+                <li>Parceiro Oficial Cloud Gold</li>
+            </ul>
+        </section>
+    </aside>
+
+    <!-- RODAPÉ DA PÁGINA -->
+    <footer>
+        <section>
+            <h3>Canais Oficiais</h3>
+            <address>
+                <p>TechInova Soluções Tecnológicas Ltda.</p>
+                <p>Av. Paulista, 1000 - Bela Vista, São Paulo - SP, CEP: 01310-100</p>
+                <p>Telefone: <a href="tel:+551130000000">(11) 3000-0000</a></p>
+                <p>E-mail: <a href="mailto:contato@techinova.com.br">contato@techinova.com.br</a></p>
+            </address>
+        </section>
+
+        <p><small>&copy; 2026 TechInova Soluções Tecnológicas. Todos os direitos reservados.</small></p>
+    </footer>
+
+</body>
+</html>

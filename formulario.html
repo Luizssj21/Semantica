@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de cadastro e contato com campos estruturados e validações nativas em HTML5.">
+    <title>Exercício: Formulário com Validações Nativas</title>
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <h1>Formulário de Cadastro & Contato</h1>
+        <p>Exemplo prático de formulário utilizando tags semânticas e validações nativas do HTML5.</p>
+        <nav aria-label="Navegação secundária">
+            <a href="index.html">&larr; Voltar para a Página Institucional</a>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        <section>
+            <h2>Ficha de Cadastro do Usuário</h2>
+            <p>Os campos marcados com um asterisco (<strong>*</strong>) são de preenchimento obrigatório.</p>
+
+            <form action="#" method="POST">
+
+                <!-- GRUPO 1: DADOS PESSOAIS -->
+                <fieldset>
+                    <legend>1. Dados Pessoais</legend>
+
+                    <!-- Nome Completo -->
+                    <p>
+                        <label for="nome-completo">Nome Completo: *</label><br>
+                        <input 
+                            type="text" 
+                            id="nome-completo" 
+                            name="nome_completo" 
+                            required 
+                            minlength="3" 
+                            maxlength="60" 
+                            placeholder="Digite seu nome completo"
+                            autocomplete="name">
+                        <small>(Mínimo de 3 caracteres)</small>
+                    </p>
+
+                    <!-- Data de Nascimento -->
+                    <p>
+                        <label for="data-nascimento">Data de Nascimento: *</label><br>
+                        <input 
+                            type="date" 
+                            id="data-nascimento" 
+                            name="data_nascimento" 
+                            required 
+                            min="1920-01-01" 
+                            max="2010-12-31">
+                    </p>
+
+                    <!-- CPF -->
+                    <p>
+                        <label for="cpf">CPF: *</label><br>
+                        <input 
+                            type="text" 
+                            id="cpf" 
+                            name="cpf" 
+                            required 
+                            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}|\d{11}" 
+                            title="Digite 11 dígitos numéricos ou no formato 000.000.000-00" 
+                            placeholder="000.000.000-00">
+                    </p>
+
+                    <!-- Gênero (Radio buttons) -->
+                    <fieldset>
+                        <legend>Gênero:</legend>
+                        <input type="radio" id="gen-fem" name="genero" value="feminino" required>
+                        <label for="gen-fem">Feminino</label>
+
+                        <input type="radio" id="gen-masc" name="genero" value="masculino">
+                        <label for="gen-masc">Masculino</label>
+
+                        <input type="radio" id="gen-outro" name="genero" value="outro">
+                        <label for="gen-outro">Outro</label>
+
+                        <input type="radio" id="gen-prefere-nao-dizer" name="genero" value="nao_informado">
+                        <label for="gen-prefere-nao-dizer">Prefiro não informar</label>
+                    </fieldset>
+                </fieldset>
+
+                <!-- GRUPO 2: DADOS DE CONTATO E ACESSO -->
+                <fieldset>
+                    <legend>2. Dados de Contato e Acesso</legend>
+
+                    <!-- E-mail -->
+                    <p>
+                        <label for="email-usuario">E-mail: *</label><br>
+                        <input 
+                            type="email" 
+                            id="email-usuario" 
+                            name="email_usuario" 
+                            required 
+                            placeholder="exemplo@dominio.com"
+                            autocomplete="email">
+                    </p>
+
+                    <!-- Telefone Celular -->
+                    <p>
+                        <label for="celular">Telefone Celular: *</label><br>
+                        <input 
+                            type="tel" 
+                            id="celular" 
+                            name="celular" 
+                            required 
+                            pattern="[0-9]{10,11}" 
+                            title="Digite DDD + número (10 ou 11 dígitos, apenas números)" 
+                            placeholder="Ex: 11999998888"
+                            autocomplete="tel">
+                    </p>
+
+                    <!-- Senha com validação de padrão -->
+                    <p>
+                        <label for="senha">Senha de Acesso: *</label><br>
+                        <input 
+                            type="password" 
+                            id="senha" 
+                            name="senha" 
+                            required 
+                            minlength="8" 
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                            title="A senha deve ter no mínimo 8 caracteres, contendo pelo menos uma letra maiúscula, uma minúscula e um número." 
+                            placeholder="Crie uma senha forte">
+                        <br>
+                        <small>(Mínimo 8 caracteres, com ao menos uma maiúscula, uma minúscula e um número)</small>
+                    </p>
+                </fieldset>
+
+                <!-- GRUPO 3: PREFERÊNCIAS E INTERESSES -->
+                <fieldset>
+                    <legend>3. Interesses e Mensagem</legend>
+
+                    <!-- Seleção de Categoria -->
+                    <p>
+                        <label for="area-interesse">Área de Interesse: *</label><br>
+                        <select id="area-interesse" name="area_interesse" required>
+                            <option value="" disabled selected>Selecione uma opção...</option>
+                            <option value="frontend">Desenvolvimento Front-end</option>
+                            <option value="backend">Desenvolvimento Back-end</option>
+                            <option value="devops">Cloud & DevOps</option>
+                            <option value="dados">Ciência de Dados & IA</option>
+                            <option value="design">UI/UX Design</option>
+                        </select>
+                    </p>
+
+                    <!-- Campo Numérico -->
+                    <p>
+                        <label for="experiencia">Anos de experiência na área: *</label><br>
+                        <input 
+                            type="number" 
+                            id="experiencia" 
+                            name="anos_experiencia" 
+                            required 
+                            min="0" 
+                            max="50" 
+                            step="1" 
+                            value="0">
+                    </p>
+
+                    <!-- Mensagem / Bio -->
+                    <p>
+                        <label for="biografia">Breve Apresentação ou Mensagem: *</label><br>
+                        <textarea 
+                            id="biografia" 
+                            name="biografia" 
+                            rows="4" 
+                            cols="40" 
+                            required 
+                            minlength="15" 
+                            maxlength="500" 
+                            placeholder="Escreva um resumo de pelo menos 15 caracteres..."></textarea>
+                    </p>
+                </fieldset>
+
+                <!-- GRUPO 4: TERMOS E CONFIRMAÇÃO -->
+                <fieldset>
+                    <legend>4. Termos e Condições</legend>
+
+                    <p>
+                        <input type="checkbox" id="concordo-termos" name="concordo_termos" required>
+                        <label for="concordo-termos">Li e concordo com os Termos de Uso e Política de Privacidade. *</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="receber-avisos" name="receber_avisos" value="sim">
+                        <label for="receber-avisos">Desejo receber novidades e oportunidades por e-mail.</label>
+                    </p>
+                </fieldset>
+
+                <!-- AÇÕES DO FORMULÁRIO -->
+                <p>
+                    <button type="submit">Cadastrar e Enviar</button>
+                    <button type="reset">Limpar Dados</button>
+                </p>
+
+            </form>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <hr>
+        <p><small>Exercício prático de HTML5 Semântico e Validação de Formulários.</small></p>
+        <p><a href="index.html">&larr; Voltar para a Página Institucional</a></p>
+    </footer>
+
+</body>
+</html>
